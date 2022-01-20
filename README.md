@@ -20,3 +20,17 @@ sh 03.align_postprocess.sh [sample_ID]
 ```
 sh 04.genotyping.sh [sample_ID]
 ```
+
+5. SNP filtering and calculateing intersexual Fst 
+```
+# SNP filtering 
+
+# Calculating intersexual Fst for each SNPs
+
+#(1) SNPs with top 1% Fst 
+
+#(2) Fisher's exact test
+
+#(3) Permutation test
+
+```
