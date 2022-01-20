@@ -1,3 +1,22 @@
 # GENE-DUPLICATION-TO-THE-Y-CHROMOSOME-IN-TRINIDADIAN-GUPPIES
 Scripts for Y. Lin et al., GENE DUPLICATION TO THE Y CHROMOSOME IN TRINIDADIAN GUPPIES
-01. Quality Control
+
+1. Quality Control and adaptor removal
+```
+python 01.quality-control_fqs.py -fqs [/path/fq_files/] -o [./qc/] -t [10] -trim -qc
+```
+
+2. align high-quality reads to female reference genome 
+```
+python 02.alignment_bwa.py -r [/path/ref_genome/] -bwa [bwa] -fq [./trim/] -a -t [10]
+```
+
+3. fixmate, sort and mark duplciation
+```
+sh 03.align_postprocess.sh [sample_ID]
+```
+
+4. genotyping using GATK 
+```
+sh 04.genotyping.sh [sample_ID]
+```
