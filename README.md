@@ -21,7 +21,7 @@ sh 03.align_postprocess.sh [sample_ID]
 sh 04.genotyping.sh [sample_ID]
 ```
 
-5. SNP filtering and calculateing intersexual Fst 
+5. SNP filtering and calculateing intersexual Fst (to be modified...)
 ```
 # SNP filtering 
 
@@ -34,3 +34,4 @@ sh 04.genotyping.sh [sample_ID]
 #(3) Permutation test
 
 ```
+
