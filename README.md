@@ -30,12 +30,14 @@ sh 04.genotyping.sh [sample_ID]
 #(1) SNPs with top 1% Fst 
 
 (2) Fisher's exact test, please check details on 05.FisherExactTest folder
-
-```sh fisher_cds_vcf.sh```
+```
+sh fisher_cds_vcf.sh
+```
 
 (3) Permutation test, please check details on 06.permutation_test folder
-
-```sh run_permutation_sex.sh``` 
+```
+sh run_permutation_sex.sh
+``` 
 
 
 
