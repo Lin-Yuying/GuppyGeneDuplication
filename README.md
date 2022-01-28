@@ -18,7 +18,7 @@ sh 03.align_postprocess.sh [sample_ID]
 
 4. Genotyping using SAMtools, please check the pipeline before using it. 
 ```
-sh 04.genotyping.sh [sample_ID]
+sh 04.GenotypingAndSNPFiltering/SNP_calling.sh [sample_ID] [region_name]
 ```
 
 5. SNP filtering and calculateing intersexual Fst (to be modified...)
@@ -42,7 +42,7 @@ vcftools --vcf [vcf] --weir-fst-pop [female.txt] --weir-fst-pop [male.txt] --out
 sh 05.FisherExactTest/fisher_cds_vcf.sh
 ```
 
-(5) Permutation test, please check details on 06.permutation_test folder
+(5) Permutation test, please check details on 06.PermutationTest folder
 ```
 sh 06.permutation_test/run_permutation_sex.sh
 ``` 
