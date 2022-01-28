@@ -23,20 +23,28 @@ sh 04.genotyping.sh [sample_ID]
 
 5. SNP filtering and calculateing intersexual Fst (to be modified...)
 
-#SNP filtering 
-
-#Calculating intersexual Fst for each SNPs
-
-#(1) SNPs with top 1% Fst 
-
-(2) Fisher's exact test, please check details on 05.FisherExactTest folder
+(1) SNP filtering
 ```
-sh fisher_cds_vcf.sh
+vcftools --gzvcf [input] --maf 0.05 --mac 1 --min-alleles 2 --max-alleles 2 --max-missing 0.9 --min-meanDP 10 
+--max-meanDP 100 --bed guppy_cds_coords.txt --recode --recode-INFO-all --minGQ 25 --out [output]
 ```
 
-(3) Permutation test, please check details on 06.permutation_test folder
+
+(2) Calculating intersexual Fst for each SNPs
 ```
-sh run_permutation_sex.sh
+vcftools --vcf [vcf] --weir-fst-pop [female.txt] --weir-fst-pop [male.txt] --out [output]
+```
+
+(3) SNPs with top 1% Fst 
+
+(4) Fisher's exact test, please check details on 05.FisherExactTest folder
+```
+sh 05.FisherExactTest/fisher_cds_vcf.sh
+```
+
+(5) Permutation test, please check details on 06.permutation_test folder
+```
+sh 06.permutation_test/run_permutation_sex.sh
 ``` 
 
 
