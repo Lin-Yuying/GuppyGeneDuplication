@@ -16,7 +16,7 @@ python 02.alignment_bwa.py -r [/path/ref_genome/] -bwa [bwa] -fq [./trim/] -a -t
 sh 03.align_postprocess.sh [sample_ID]
 ```
 
-4. Genotyping using GATK 
+4. Genotyping using GATK, please check the pipeline before using it. 
 ```
 sh 04.genotyping.sh [sample_ID]
 ```
@@ -29,9 +29,9 @@ sh 04.genotyping.sh [sample_ID]
 
 #(1) SNPs with top 1% Fst 
 
-#(2) Fisher's exact test
-
-#(3) Permutation test
-
+#(2) Fisher's exact test, details please check 05.FisherExactTest folder
+sh fisher_cds_vcf.sh
+#(3) Permutation test, please check details on 06.permutation_test folder
+sh run_permutation_sex.sh 
 ```
 
