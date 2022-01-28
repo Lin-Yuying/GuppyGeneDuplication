@@ -16,7 +16,7 @@ python 02.alignment_bwa.py -r [/path/ref_genome/] -bwa [bwa] -fq [./trim/] -a -t
 sh 03.align_postprocess.sh [sample_ID]
 ```
 
-4. Genotyping using GATK, please check the pipeline before using it. 
+4. Genotyping using SAMtools, please check the pipeline before using it. 
 ```
 sh 04.genotyping.sh [sample_ID]
 ```
