@@ -1,7 +1,7 @@
 ## GuppyGeneDuplication
 Scripts for Lin, Y., Darolti, I., Furman, B. L. F., Almeida, P., Sandkam, B. A., et al., Breden, F., Wright, A. E., Mank, J. E. (2022) Gene duplication to the Y chromosome in Trindadian Guppies. https://doi.org/10.1111/mec.16355
 
-1. Quality control and adaptor removal
+1. Quality control
 ```
 python 01.quality-control_fqs.py -fqs [/path/fq_files/] -o [./qc/] -t [10] -trim -qc
 ```
