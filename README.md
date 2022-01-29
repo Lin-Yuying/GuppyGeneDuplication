@@ -21,7 +21,7 @@ sh 03.align_postprocess.sh [sample_ID]
 sh 04.GenotypingAndSNPFiltering/SNP_calling.sh [sample_ID] [region_name]
 ```
 
-5. SNP filtering and calculateing intersexual Fst (to be modified...)
+5. SNP filtering and calculateing intersexual Fst
 
 (1) SNP filtering
 ```
@@ -46,6 +46,10 @@ sh 05.FisherExactTest/fisher_cds_vcf.sh
 ```
 sh 06.permutation_test/run_permutation_sex.sh
 ``` 
+
+6. Male-to-Female read depth ratio (to be modified...)
+7. Tajima's D  (to be modified...)
+8. Relatedness Inference  (to be modified...)
 
 
 
