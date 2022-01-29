@@ -3,7 +3,7 @@ Scripts for Lin, Y., Darolti, I., Furman, B. L. F., Almeida, P., Sandkam, B. A.,
 
 1. Quality control
 ```
-python 01.quality-control_fqs.py -fqs [/path/fq_files/] -o [./qc/] -t [10] -trim -qc
+python 01.quality_control_fqs.py -fqs [/path/fq_files/] -o [./qc/] -t [10] -trim -qc
 ```
 
 2. Align high-quality reads to female reference genome 
