@@ -11,7 +11,7 @@ python 01.quality-control_fqs.py -fqs [/path/fq_files/] -o [./qc/] -t [10] -trim
 python 02.alignment_bwa.py -r [/path/ref_genome/] -bwa [bwa] -fq [./trim/] -a -t [10]
 ```
 
-3. Fixmate, sort and mark duplciation
+3. Fixmate, sort and mark duplications
 ```
 sh 03.align_postprocess.sh [sample_ID]
 ```
