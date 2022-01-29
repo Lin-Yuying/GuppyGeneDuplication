@@ -1,5 +1,5 @@
 # GENE-DUPLICATION-TO-THE-Y-CHROMOSOME-IN-TRINIDADIAN-GUPPIES
-Scripts for Y. Lin et al., Gene duplication to the Y chromosome in Trindadian guppies. in press: Mol Ecol. 2022
+Scripts for Lin,Y., Darolti, I., Furman, B. L. F., Almeida, P., Sandkam, B. A., et al., Breden, F., Wright, A. E., Mank, J. E. (2022) Gene duplication to the Y chromosome in Trindadian Guppies. https://doi.org/10.1111/mec.16355
 
 1. Quality control and adaptor removal
 ```
