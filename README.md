@@ -16,21 +16,19 @@ python 02.alignment_bwa.py -r [/path/ref_genome/] -bwa [bwa] -fq [./trim/] -a -t
 sh 03.align_postprocess.sh [sample_ID]
 ```
 
-4. Genotyping using SAMtools, please check the pipeline before using it. 
+4. Genotyping,SNP filtering and calculateing intersexual Fst. 
+#(1) Genotyping using SAMtools
 ```
 sh 04.GenotypingAndSNPFiltering/SNP_calling.sh [sample_ID] [region_name]
 ```
 
-5. SNP filtering and calculateing intersexual Fst
-
-#(1) SNP filtering
+#(1) SNP filtering using VCFtools
 ```
 vcftools --gzvcf [input] --maf 0.05 --mac 1 --min-alleles 2 --max-alleles 2 --max-missing 0.9 --min-meanDP 10 
 --max-meanDP 100 --bed guppy_cds_coords.txt --recode --recode-INFO-all --minGQ 25 --out [output]
 ```
 
-
-#(2) Calculating intersexual Fst for each SNPs
+#(2) Calculating intersexual Fst for each SNPs using VCFtools
 ```
 vcftools --vcf [vcf] --weir-fst-pop [female.txt] --weir-fst-pop [male.txt] --out [output]
 ```
