@@ -45,11 +45,11 @@ sh 05.FisherExactTest/fisher_cds_vcf.sh
 sh 06.permutation_test/run_permutation_sex.sh
 ``` 
 
-6. Male-to-Female read depth ratio (to be modified...)
+5. Male-to-Female read depth ratio (to be modified...)
 
-7. Tajima's D  (to be modified...)
+6. Tajima's D  (to be modified...)
 
-8. Relatedness Inference  (to be modified...)
+7. Relatedness Inference  (to be modified...)
 
 
 
