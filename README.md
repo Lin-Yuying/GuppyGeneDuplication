@@ -38,12 +38,12 @@ sh 03.align_postprocess.sh [sample_ID]
 
     #(5) Fisher's exact test, please check details on 05.FisherExactTest folder
     ```
-    sh 05a.FisherExactTest/fisher_cds_vcf.sh
+    sh 05.FisherExactTest/fisher_cds_vcf.sh
     ```
 
     #(6) Permutation test, please check details on 06.PermutationTest folder
     ```
-    sh 05b.permutation_test/run_permutation_sex.sh
+    sh 06.permutation_test/run_permutation_sex.sh
     ``` 
 
 5. Male-to-Female read depth ratio 
