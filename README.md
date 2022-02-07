@@ -2,26 +2,26 @@
 Scripts for Lin, Y., Darolti, I., Furman, B. L. F., Almeida, P., Sandkam, B. A., et al., Breden, F., Wright, A. E., Mank, J. E. (2022) Gene duplication to the Y chromosome in Trindadian Guppies. Molecular Ecology. https://doi.org/10.1111/mec.16355
 
 1. Quality control
-```
-python 01.quality_control_fqs.py -fqs [/path/fq_files/] -o [./qc/] -t [10] -trim -qc
-```
+   ```
+   python 01.quality_control_fqs.py -fqs [/path/fq_files/] -o [./qc/] -t [10] -trim -qc
+   ```
 
 2. Align high-quality reads to female reference genome 
-```
-python 02.alignment_bwa.py -r [/path/ref_genome/] -bwa [bwa] -fq [./trim/] -a -t [10]
-```
+   ```
+   python 02.alignment_bwa.py -r [/path/ref_genome/] -bwa [bwa] -fq [./trim/] -a -t [10]
+   ```
 
 3. Fixmate, sort and mark duplications
-```
-sh 03.align_postprocess.sh [sample_ID]
-```
+   ```
+   sh 03.align_postprocess.sh [sample_ID]
+   ```
 
 4. Genotyping,SNP filtering and calculateing intersexual Fst. 
 
-   #(1) Genotyping using SAMtools
-   ```
-   sh 04.GenotypingSNPFiltering/SNP_calling.sh [sample_ID] [region_name]
-   ```
+    #(1) Genotyping using SAMtools
+    ```
+    sh 04.GenotypingSNPFiltering/SNP_calling.sh [sample_ID] [region_name]
+    ```
 
     #(2) SNP filtering using VCFtools, here we only keep SNPs in CDS region by specific `--bed guppy_cds_coords.txt`
     ```
@@ -47,26 +47,32 @@ sh 03.align_postprocess.sh [sample_ID]
     ``` 
 
 5. Male-to-Female read depth ratio 
-```
-sh 07.M2FReadDepth/MFReadDepth.sh
-```
+   ```
+   sh 07.M2FReadDepth/MFReadDepth.sh
+   ```
 
 6. Tajima's D
-```
-#(1) exclude genes with immune and MHC function in reference genome 
-# based on Biomart info from Ensembl on 
-# http://uswest.ensembl.org/biomart/martview/4c439c138f54b451b2fea301544e731a
-python 08.TajimaD/exclude_immune_MHC.py [immune_MHC.bed] [outprefix.csv] 
-#(2) calculate gene-based Tajima's D
-python 08.TajimaD/gene_TajimaD [gene_boundary.csv] [site.TajimaD] [outprefix.csv]
-```
+
+    #(1) exclude genes with immune and MHC function in reference genome based on Biomart info from Ensembl on          
+    http://uswest.ensembl.org/biomart/martview/4c439c138f54b451b2fea301544e731a
+    ```
+    python 08.TajimaD/exclude_immune_MHC.py [immune_MHC.bed] [outprefix.csv] 
+    ```
+    
+    #(2) calculate gene-based Tajima's D
+    ```
+    python 08.TajimaD/gene_TajimaD [gene_boundary.csv] [site.TajimaD] [outprefix.csv]
+    ```
 
 7. Relatedness Inference 
-```
-#(a) ngsRelate 
-ngsrelate  -h [VCF.gz] -O [vcf.res]
 
-#(b) KING 
-king -b [my.bed] --fam [my.fam] --bim [my.bim] --related
-```
+    #(a) ngsRelate 
+    ```
+    ngsrelate  -h [VCF.gz] -O [vcf.res]
+    ```
+
+    #(b) KING 
+    ```
+    king -b [my.bed] --fam [my.fam] --bim [my.bim] --related
+    ```
 
