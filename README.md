@@ -17,30 +17,31 @@ sh 03.align_postprocess.sh [sample_ID]
 ```
 
 4. Genotyping,SNP filtering and calculateing intersexual Fst. 
+
 #(1) Genotyping using SAMtools
 ```
 sh 04.GenotypingAndSNPFiltering/SNP_calling.sh [sample_ID] [region_name]
 ```
 
-#(1) SNP filtering using VCFtools
+#(2) SNP filtering using VCFtools
 ```
 vcftools --gzvcf [input] --maf 0.05 --mac 1 --min-alleles 2 --max-alleles 2 --max-missing 0.9 --min-meanDP 10 
 --max-meanDP 100 --bed guppy_cds_coords.txt --recode --recode-INFO-all --minGQ 25 --out [output]
 ```
 
-#(2) Calculating intersexual Fst for each SNPs using VCFtools
+#(3) Calculating intersexual Fst for each SNPs using VCFtools
 ```
 vcftools --vcf [vcf] --weir-fst-pop [female.txt] --weir-fst-pop [male.txt] --out [output]
 ```
 
-#(3) SNPs with top 1% Fst 
+#(4) SNPs with top 1% Fst 
 
-#(4) Fisher's exact test, please check details on 05.FisherExactTest folder
+#(5) Fisher's exact test, please check details on 05.FisherExactTest folder
 ```
 sh 05.FisherExactTest/fisher_cds_vcf.sh
 ```
 
-#(5) Permutation test, please check details on 06.PermutationTest folder
+#(6) Permutation test, please check details on 06.PermutationTest folder
 ```
 sh 06.permutation_test/run_permutation_sex.sh
 ``` 
