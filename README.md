@@ -1,17 +1,17 @@
 ## GuppyGeneDuplication
 Scripts for Lin, Y., Darolti, I., Furman, B. L. F., Almeida, P., Sandkam, B. A., et al., Breden, F., Wright, A. E., Mank, J. E. (2022) Gene duplication to the Y chromosome in Trindadian Guppies. Molecular Ecology. https://doi.org/10.1111/mec.16355
 
-1. Quality control
+1. Quality control using FastQC and Trimmomatic
    ```
    python 01.quality_control_fqs.py -fqs [/path/fq_files/] -o [./qc/] -t [10] -trim -qc
    ```
 
-2. Align high-quality reads to female reference genome 
+2. Align high-quality reads to female reference genome using BWA MEM
    ```
    python 02.alignment_bwa.py -r [/path/ref_genome/] -bwa [bwa] -fq [./trim/] -a -t [10]
    ```
 
-3. Fixmate, sort and mark duplications
+3. Fixmate, sort and mark duplications using SAMtools
    ```
    sh 03.align_postprocess.sh [sample_ID]
    ```
@@ -36,7 +36,7 @@ Scripts for Lin, Y., Darolti, I., Furman, B. L. F., Almeida, P., Sandkam, B. A.,
     
     #(4) SNPs with top 1% Fst 
 
-    #(5) Fisher's exact test, please check details on 05.FisherExactTest folder
+    #(5) Fisher's exact test using PLINK1.9, please check details on 05.FisherExactTest folder
     ```
     sh 05.FisherExactTest/fisher_cds_vcf.sh
     ```
