@@ -23,8 +23,8 @@ with open(sys.argv[2],'r') as inf:
 			large_list.remove(i)
 		else:
 			print(i)
-
-print(len(large_list))
+#debug
+#print(len(large_list))
 #print(large_list)
 
 	
