@@ -51,14 +51,15 @@ sh 06.permutation_test/run_permutation_sex.sh
 sh 07.M2FReadDepth/MFReadDepth.sh
 ```
 
-6. Tajima's D  (to be modified...)
+6. Tajima's D  
 
 7. Relatedness Inference 
 
 ```
 #(a) ngsRelate 
-ngsrelate  -h my.VCF.gz -O vcf.res
+ngsrelate  -h [VCF.gz] -O [vcf.res]
 
-#(b) 
+#(b) KING 
+king -b [my.bed] --fam [my.fam] --bim [my.bim] --related
 ```
 
