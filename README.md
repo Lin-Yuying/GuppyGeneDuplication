@@ -20,7 +20,7 @@ sh 03.align_postprocess.sh [sample_ID]
 
    #(1) Genotyping using SAMtools
    ```
-   sh 04.GenotypingAndSNPFiltering/SNP_calling.sh [sample_ID] [region_name]
+   sh 04.GenotypingSNPFiltering/SNP_calling.sh [sample_ID] [region_name]
    ```
 
     #(2) SNP filtering using VCFtools, here we only keep SNPs in CDS region by specific `--bed guppy_cds_coords.txt`
