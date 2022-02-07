@@ -66,12 +66,12 @@ Scripts for Lin, Y., Darolti, I., Furman, B. L. F., Almeida, P., Sandkam, B. A.,
 
 7. Relatedness Inference 
 
-    #(a) ngsRelate 
+    #(1) ngsRelate 
     ```
     ngsrelate  -h [VCF.gz] -O [vcf.res]
     ```
 
-    #(b) KING 
+    #(2) KING 
     ```
     king -b [my.bed] --fam [my.fam] --bim [my.bim] --related
     ```
