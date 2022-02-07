@@ -54,15 +54,14 @@ sh 07.M2FReadDepth/MFReadDepth.sh
 6. Tajima's D
 ```
 #(1) exclude genes with immune and MHC function in reference genome 
-based on Biomart info from Ensembl on 
-http://uswest.ensembl.org/biomart/martview/4c439c138f54b451b2fea301544e731a
+# based on Biomart info from Ensembl on 
+# http://uswest.ensembl.org/biomart/martview/4c439c138f54b451b2fea301544e731a
 python 08.TajimaD/exclude_immune_MHC.py [immune_MHC.bed] [outprefix.csv] 
 #(2) calculate gene-based Tajima's D
 python 08.TajimaD/gene_TajimaD [gene_boundary.csv] [site.TajimaD] [outprefix.csv]
 ```
 
 7. Relatedness Inference 
-
 ```
 #(a) ngsRelate 
 ngsrelate  -h [VCF.gz] -O [vcf.res]
