@@ -34,6 +34,7 @@ sh 03.align_postprocess.sh [sample_ID]
     vcftools --vcf [vcf] --weir-fst-pop [female.txt] --weir-fst-pop [male.txt] --out [output]
     ```
 5. Three methods to define high-confident sexaully differentiated SNPs
+
     #(1) SNPs with top 1% Fst 
 
     #(2) Fisher's exact test, please check details on 05.FisherExactTest folder
