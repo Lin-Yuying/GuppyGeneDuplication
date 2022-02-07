@@ -33,26 +33,25 @@ sh 03.align_postprocess.sh [sample_ID]
     ```
     vcftools --vcf [vcf] --weir-fst-pop [female.txt] --weir-fst-pop [male.txt] --out [output]
     ```
-5. Three methods to define high-confident sexaully differentiated SNPs
+    
+    #(4) SNPs with top 1% Fst 
 
-    #(1) SNPs with top 1% Fst 
-
-    #(2) Fisher's exact test, please check details on 05.FisherExactTest folder
+    #(5) Fisher's exact test, please check details on 05.FisherExactTest folder
     ```
     sh 05a.FisherExactTest/fisher_cds_vcf.sh
     ```
 
-    #(3) Permutation test, please check details on 06.PermutationTest folder
+    #(6) Permutation test, please check details on 06.PermutationTest folder
     ```
     sh 05b.permutation_test/run_permutation_sex.sh
     ``` 
 
-6. Male-to-Female read depth ratio 
+5. Male-to-Female read depth ratio 
 ```
 sh 07.M2FReadDepth/MFReadDepth.sh
 ```
 
-7. Tajima's D
+6. Tajima's D
 ```
 #(1) exclude genes with immune and MHC function in reference genome 
 # based on Biomart info from Ensembl on 
@@ -62,7 +61,7 @@ python 08.TajimaD/exclude_immune_MHC.py [immune_MHC.bed] [outprefix.csv]
 python 08.TajimaD/gene_TajimaD [gene_boundary.csv] [site.TajimaD] [outprefix.csv]
 ```
 
-8. Relatedness Inference 
+7. Relatedness Inference 
 ```
 #(a) ngsRelate 
 ngsrelate  -h [VCF.gz] -O [vcf.res]
