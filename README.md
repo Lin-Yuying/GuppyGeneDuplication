@@ -46,7 +46,10 @@ sh 05.FisherExactTest/fisher_cds_vcf.sh
 sh 06.permutation_test/run_permutation_sex.sh
 ``` 
 
-5. Male-to-Female read depth ratio (to be modified...)
+5. Male-to-Female read depth ratio 
+```
+sh 07.M2FReadDepth/MFReadDepth.sh
+```
 
 6. Tajima's D  (to be modified...)
 
