@@ -50,7 +50,12 @@ sh 06.permutation_test/run_permutation_sex.sh
 
 6. Tajima's D  (to be modified...)
 
-7. Relatedness Inference  (to be modified...)
+7. Relatedness Inference 
 
+```
+#(a) ngsRelate 
+ngsrelate  -h my.VCF.gz -O vcf.res
 
+#(b) 
+```
 
