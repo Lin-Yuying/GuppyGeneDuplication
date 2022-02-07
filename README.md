@@ -1,22 +1,22 @@
 ## GuppyGeneDuplication
 Scripts for Lin, Y., Darolti, I., Furman, B. L. F., Almeida, P., Sandkam, B. A., et al., Breden, F., Wright, A. E., Mank, J. E. (2022) Gene duplication to the Y chromosome in Trindadian Guppies. Molecular Ecology. https://doi.org/10.1111/mec.16355
 
-1. Quality control using FastQC and Trimmomatic
+1. Quality control using FastQC and Trimmomatic.
    ```
    python 01.quality_control_fqs.py -fqs [/path/fq_files/] -o [./qc/] -t [10] -trim -qc
    ```
 
-2. Align high-quality reads to female reference genome using BWA MEM
+2. Align high-quality reads to female reference genome using BWA MEM.
    ```
    python 02.alignment_bwa.py -r [/path/ref_genome/] -bwa [bwa] -fq [./trim/] -a -t [10]
    ```
 
-3. Fixmate, sort and mark duplications using SAMtools
+3. Fixmate, sort and mark duplications using SAMtools.
    ```
    sh 03.align_postprocess.sh [sample_ID]
    ```
 
-4. Genotyping,SNP filtering and calculateing intersexual Fst. 
+4. Genotyping,SNP filtering and calculating intersexual Fst. 
 
     #(1) Genotyping using SAMtools
     ```
@@ -35,6 +35,10 @@ Scripts for Lin, Y., Darolti, I., Furman, B. L. F., Almeida, P., Sandkam, B. A.,
     ```
     
     #(4) SNPs with top 1% Fst 
+    ```
+    # we simply do 1% cut-off here, for example in Python, we use quantile function from numpy pkg
+    numpy.quantile (data, 0.01) 
+    ```
 
     #(5) Fisher's exact test using PLINK1.9, please check details on 05.FisherExactTest folder
     ```
@@ -66,12 +70,12 @@ Scripts for Lin, Y., Darolti, I., Furman, B. L. F., Almeida, P., Sandkam, B. A.,
 
 7. Relatedness Inference 
 
-    #(1) ngsRelate 
+    #(1) ngsRelate, here, please use filtered VCF and DON'T exclude non-CDS region
     ```
-    ngsrelate  -h [VCF.gz] -O [vcf.res]
+    ngsrelate  -h [VCF.filtered.gz] -O [vcf.res]
     ```
 
-    #(2) KING 
+    #(2) KING, before using KING, please convert VCF to `.bed`,`.fam` and `bim` using PLINK1.9 
     ```
     king -b [my.bed] --fam [my.fam] --bim [my.bim] --related
     ```
