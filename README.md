@@ -61,7 +61,7 @@ Scripts for Lin, Y., Darolti, I., Furman, B. L. F., Almeida, P., Sandkam, B. A.,
     
     #(2) calculate gene-based Tajima's D
     ```
-    python 08.TajimaD/gene_TajimaD [gene_boundary.csv] [site.TajimaD] [outprefix.csv]
+    python 08.TajimaD/gene_TajimaD.py [gene_boundary.csv] [site.TajimaD] [outprefix.csv]
     ```
 
 7. Relatedness Inference 
