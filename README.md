@@ -75,7 +75,7 @@ Scripts for Lin, Y., Darolti, I., Furman, B. L. F., Almeida, P., Sandkam, B. A.,
     ngsrelate  -h [VCF.filtered.gz] -O [vcf.res]
     ```
 
-    #(2) KING, before using KING, please convert VCF to `.bed`,`.fam` and `.bim` using PLINK1.9 
+    #(2) KING, before using KING, please convert VCF to `.bed`, `.fam` and `.bim` using PLINK1.9 
     ```
     king -b [my.bed] --fam [my.fam] --bim [my.bim] --related
     ```
