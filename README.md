@@ -18,7 +18,7 @@ Note: All Python scripts is written with Python3, it is not compatible with Pyth
    sh 03.align_postprocess.sh [sample_ID]
    ```
 
-4. Genotyping,SNP filtering and calculating intersexual Fst. 
+4. Genotyping, SNP filtering and calculating intersexual Fst. 
 
     #(1) Genotyping using [BCFtools](https://github.com/samtools/bcftools)
     ```
@@ -42,7 +42,7 @@ Note: All Python scripts is written with Python3, it is not compatible with Pyth
     numpy.quantile (data, 0.01) 
     ```
 
-    #(5) Fisher's exact test using PLINK1.9, please check details on [05.FisherExactTest](./05.FisherExactTest)
+    #(5) Fisher's exact test using [PLINK1.9](https://www.cog-genomics.org/plink/), please check details on [05.FisherExactTest](./05.FisherExactTest)
     ```
     python 05.FisherExactTest/changeid.py [original.vcf] [newid.vcf]
     sh 05.FisherExactTest/fisher_cds_vcf.sh [newid.vcf] [outprefix]
@@ -71,7 +71,7 @@ Note: All Python scripts is written with Python3, it is not compatible with Pyth
     python 08.TajimaD/gene_TajimaD.py [gene_boundary.csv] [site.TajimaD] [outprefix.csv]
     ```
 
-7. Relatedness Inference using [ngsRelate](https://github.com/ANGSD/NgsRelate) and [KING](https://www.kingrelatedness.com/)
+7. Relatedness inference using [ngsRelate](https://github.com/ANGSD/NgsRelate) and [KING](https://www.kingrelatedness.com/)
 
     #(1) ngsRelate, here, please use filtered VCF and DON'T exclude non-CDS regions
     ```
