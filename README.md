@@ -25,13 +25,13 @@ Note: All Python scripts is written with Python3, it is not compatible with Pyth
     sh 04.GenotypingSNPFiltering/SNP_calling.sh [sample_ID] [region_name]
     ```
 
-    #(2) SNP filtering using VCFtools, here we only keep SNPs in CDS regions by specifying `--bed guppy_cds_coords.txt`
+    #(2) SNP filtering using [VCFtools](https://vcftools.github.io/index.html), here we only keep SNPs in CDS regions by specifying `--bed guppy_cds_coords.txt`
     ```
     vcftools --gzvcf [input] --maf 0.05 --mac 1 --min-alleles 2 --max-alleles 2 --max-missing 0.9 --min-meanDP 10 
     --max-meanDP 100 --bed guppy_cds_coords.txt --recode --recode-INFO-all --minGQ 25 --out [output]
     ```
 
-    #(3) Calculating intersexual Fst for each SNP using VCFtools
+    #(3) Calculating intersexual Fst for each SNP using [VCFtools](https://vcftools.github.io/index.html)
     ```
     vcftools --vcf [vcf] --weir-fst-pop [female.txt] --weir-fst-pop [male.txt] --out [output]
     ```
@@ -78,7 +78,7 @@ Note: All Python scripts is written with Python3, it is not compatible with Pyth
     /path/ngsrelate  -h [VCF.filtered.gz] -O [vcf.res]
     ```
 
-    #(2) KING, before using KING, please convert VCF to `.bed`, `.fam` and `.bim` using PLINK1.9 
+    #(2) KING, before using KING, please convert VCF to `.bed`, `.fam` and `.bim` using [PLINK1.9](https://www.cog-genomics.org/plink/)
     ```
     /path/king -b [my.bed] --fam [my.fam] --bim [my.bim] --related
     ```
