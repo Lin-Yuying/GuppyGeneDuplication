@@ -73,13 +73,13 @@ Note: All Python scripts is written with Python3, it is not compatible with Pyth
 
 7. Relatedness Inference 
 
-    #(1) ngsRelate, here, please use filtered VCF and DON'T exclude non-CDS region
+    #(1) ngsRelate, here, please use filtered VCF and DON'T exclude non-CDS regions
     ```
-    ngsrelate  -h [VCF.filtered.gz] -O [vcf.res]
+    /path/ngsrelate  -h [VCF.filtered.gz] -O [vcf.res]
     ```
 
     #(2) KING, before using KING, please convert VCF to `.bed`, `.fam` and `.bim` using PLINK1.9 
     ```
-    king -b [my.bed] --fam [my.fam] --bim [my.bim] --related
+    /path/king -b [my.bed] --fam [my.fam] --bim [my.bim] --related
     ```
 
