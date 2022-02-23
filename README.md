@@ -42,7 +42,8 @@ Scripts for Lin, Y., Darolti, I., Furman, B. L. F., Almeida, P., Sandkam, B. A.,
 
     #(5) Fisher's exact test using PLINK1.9, please check details on 05.FisherExactTest folder
     ```
-    sh 05.FisherExactTest/fisher_cds_vcf.sh
+    python 05.FisherExactTest/changeid.py [original.vcf] [newid.vcf]
+    sh 05.FisherExactTest/fisher_cds_vcf.sh [newid.vcf] [outprefix]
     ```
 
     #(6) Permutation test, please check details on 06.PermutationTest folder
