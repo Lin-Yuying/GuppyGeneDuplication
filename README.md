@@ -42,7 +42,7 @@ Note: All Python scripts is written with Python3, it is not compatible with Pyth
     numpy.quantile (data, 0.01) 
     ```
 
-    #(5) Fisher's exact test using PLINK1.9, please check details on 05.FisherExactTest folder
+    #(5) Fisher's exact test using PLINK1.9, please check details on [05.FisherExactTest](./05.FisherExactTest) folder
     ```
     python 05.FisherExactTest/changeid.py [original.vcf] [newid.vcf]
     sh 05.FisherExactTest/fisher_cds_vcf.sh [newid.vcf] [outprefix]
