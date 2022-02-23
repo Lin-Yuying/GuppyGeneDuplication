@@ -25,20 +25,20 @@ Note: All Python scripts is written with Python3, it is not compatible with Pyth
     sh 04.GenotypingSNPFiltering/SNP_calling.sh [sample_ID] [region_name]
     ```
 
-    #(2) SNP filtering using VCFtools, here we only keep SNPs in CDS region by specifying `--bed guppy_cds_coords.txt`
+    #(2) SNP filtering using VCFtools, here we only keep SNPs in CDS regions by specifying `--bed guppy_cds_coords.txt`
     ```
     vcftools --gzvcf [input] --maf 0.05 --mac 1 --min-alleles 2 --max-alleles 2 --max-missing 0.9 --min-meanDP 10 
     --max-meanDP 100 --bed guppy_cds_coords.txt --recode --recode-INFO-all --minGQ 25 --out [output]
     ```
 
-    #(3) Calculating intersexual Fst for each SNPs using VCFtools
+    #(3) Calculating intersexual Fst for each SNP using VCFtools
     ```
     vcftools --vcf [vcf] --weir-fst-pop [female.txt] --weir-fst-pop [male.txt] --out [output]
     ```
     
     #(4) SNPs with top 1% Fst 
     ```
-    # we simply do 1% cut-off here, for example in Python, we use quantile function from numpy pkg
+    # we simply do 1% cut-off here, for example in Python3, we use quantile function from numpy pkg
     numpy.quantile (data, 0.01) 
     ```
 
