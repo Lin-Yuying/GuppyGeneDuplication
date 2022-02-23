@@ -3,24 +3,24 @@ Scripts for Lin, Y., Darolti, I., Furman, B. L. F., Almeida, P., Sandkam, B. A.,
 
 Note: All Python scripts is written with Python3, it is not compatible with Python2.
 
-1. Quality control using FastQC and Trimmomatic.
+1. Quality control using [FastQC](https://github.com/s-andrews/FastQC) and [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic).
    ```
    python 01.quality_control_fqs.py -fqs [/path/fq_files/] -o [./qc/] -t [10] -trim -qc
    ```
 
-2. Align high-quality reads to female reference genome using BWA MEM.
+2. Align high-quality reads to female reference genome using [BWA MEM](https://github.com/lh3/bwa).
    ```
    python 02.alignment_bwa.py -r [/path/ref_genome/] -bwa [bwa] -fq [./trim/] -a -t [10]
    ```
 
-3. Fixmate, sort and mark duplications using SAMtools.
+3. Fixmate, sort and mark duplications using [SAMtools](https://github.com/lh3/samtools).
    ```
    sh 03.align_postprocess.sh [sample_ID]
    ```
 
 4. Genotyping,SNP filtering and calculating intersexual Fst. 
 
-    #(1) Genotyping using SAMtools
+    #(1) Genotyping using [BCFtools](https://github.com/samtools/bcftools)
     ```
     sh 04.GenotypingSNPFiltering/SNP_calling.sh [sample_ID] [region_name]
     ```
@@ -42,18 +42,18 @@ Note: All Python scripts is written with Python3, it is not compatible with Pyth
     numpy.quantile (data, 0.01) 
     ```
 
-    #(5) Fisher's exact test using PLINK1.9, please check details on [05.FisherExactTest](./05.FisherExactTest) folder
+    #(5) Fisher's exact test using PLINK1.9, please check details on [05.FisherExactTest](./05.FisherExactTest)
     ```
     python 05.FisherExactTest/changeid.py [original.vcf] [newid.vcf]
     sh 05.FisherExactTest/fisher_cds_vcf.sh [newid.vcf] [outprefix]
     ```
 
-    #(6) Permutation test, please check details on 06.PermutationTest folder
+    #(6) Permutation test, please check details on [06.PermutationTest](./06.PermutationTest)
     ```
     sh 06.permutation_test/run_permutation_sex.sh
     ``` 
 
-5. Male-to-Female read depth ratio 
+5. Male-to-Female read depth ratio, please check details on [07.M2FReadDepth](./07.M2FReadDepth)
    ```
    sh 07.M2FReadDepth/MFReadDepth.sh
    ```
@@ -71,7 +71,7 @@ Note: All Python scripts is written with Python3, it is not compatible with Pyth
     python 08.TajimaD/gene_TajimaD.py [gene_boundary.csv] [site.TajimaD] [outprefix.csv]
     ```
 
-7. Relatedness Inference 
+7. Relatedness Inference using [ngsRelate](https://github.com/ANGSD/NgsRelate) and [KING](https://www.kingrelatedness.com/)
 
     #(1) ngsRelate, here, please use filtered VCF and DON'T exclude non-CDS regions
     ```
