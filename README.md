@@ -8,7 +8,7 @@ Note: All Python scripts is written with Python3, and they are NOT compatible wi
    python 01.quality_control_fqs.py -fqs [/path/fq_files/] -o [./qc/] -t [10] -trim -qc
    ```
 
-2. Align high-quality reads to female reference genome using [BWA MEM](https://github.com/lh3/bwa)
+2. Align high-quality reads to [female reference genome](http://uswest.ensembl.org/Poecilia_reticulata/Info/Index) using [BWA MEM](https://github.com/lh3/bwa)
    ```
    python 02.alignment_bwa.py -r [/path/ref_genome/] -bwa [bwa] -fq [./trim/] -a -t [10]
    ```
