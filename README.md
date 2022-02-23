@@ -60,8 +60,8 @@ Note: All Python scripts is written with Python3, it is not compatible with Pyth
 
 6. Tajima's D
 
-    #(1) exclude genes with immune and MHC function in reference genome based on Biomart info from Ensembl on          
-    http://uswest.ensembl.org/biomart/martview/4c439c138f54b451b2fea301544e731a
+    #(1) exclude genes with immune and MHC function in reference genome based on [Biomart](http://uswest.ensembl.org/biomart/martview/4c439c138f54b451b2fea301544e731a) info from Ensembl on          
+    
     ```
     python 08.TajimaD/exclude_immune_MHC.py [immune_MHC.bed] [outprefix.csv] 
     ```
