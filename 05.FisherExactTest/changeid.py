@@ -1,5 +1,5 @@
 '''
-Replace chr IDs from LG1 to 1, for runing Fisher's exact test with Plink.
+Replace chr IDs from LG1 to 1 in .vcf file, for runing Fisher's exact test with Plink.
 Note: Chr23 is the sex chromosome in human genome which will affect the exact test,
       Please keep it as it is. 
 '''
