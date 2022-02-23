@@ -3,22 +3,22 @@ Scripts for Lin, Y., Darolti, I., Furman, B. L. F., Almeida, P., Sandkam, B. A.,
 
 Note: All Python scripts is written with Python3, it is not compatible with Python2.
 
-1. Quality control using [FastQC](https://github.com/s-andrews/FastQC) and [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic).
+1. Quality control using [FastQC](https://github.com/s-andrews/FastQC) and [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
    ```
    python 01.quality_control_fqs.py -fqs [/path/fq_files/] -o [./qc/] -t [10] -trim -qc
    ```
 
-2. Align high-quality reads to female reference genome using [BWA MEM](https://github.com/lh3/bwa).
+2. Align high-quality reads to female reference genome using [BWA MEM](https://github.com/lh3/bwa)
    ```
    python 02.alignment_bwa.py -r [/path/ref_genome/] -bwa [bwa] -fq [./trim/] -a -t [10]
    ```
 
-3. Fixmate, sort and mark duplications using [SAMtools](https://github.com/lh3/samtools).
+3. Fixmate, sort and mark duplications using [SAMtools](https://github.com/lh3/samtools)
    ```
    sh 03.align_postprocess.sh [sample_ID]
    ```
 
-4. Genotyping, SNP filtering and calculating intersexual Fst. 
+4. Genotyping, SNP filtering and calculating intersexual Fst 
 
     #(1) Genotyping using [BCFtools](https://github.com/samtools/bcftools)
     ```
