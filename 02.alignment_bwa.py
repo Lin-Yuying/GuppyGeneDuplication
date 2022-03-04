@@ -2,7 +2,7 @@
 This script is used for multiprocessing alignment for paired end Illumina data using bwa-mem
 Author: Y.Lin
 Date: Jul 13, 2020 
-Usage: python [script.py] -h
+Usage: python 02.alignment_bwa.py -h
 '''
 
 import os,re
