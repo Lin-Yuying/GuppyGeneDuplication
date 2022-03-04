@@ -50,7 +50,7 @@ Note: All Python scripts are written with Python3, and they are NOT compatible w
 
     #(6) Permutation test, please check details on [06.PermutationTest](./06.PermutationTest)
     ```
-    sh 06.permutation_test/run_permutation_sex.sh
+    sh 06.permutation_test/run_permutation_sex.sh [filtered.cds.vcf]
     ``` 
 
 5. Male-to-Female read depth ratio, please check details on [07.M2FReadDepth](./07.M2FReadDepth)
