@@ -1,6 +1,6 @@
 #!/bin/bash
 sim=1
-vcf=2
+vcf=$1
 while [ $sim -lt `1000 + 1` ]
 do
 	echo "############ Simulation ${sim} ###############" >> pop.perm.log
