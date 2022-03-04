@@ -21,21 +21,20 @@ args = parse.parse_args()
 
 ######### 00. set up command line arguments #####
 # genome path
-if args.reference:
-    ref = args.reference
-else:
-    print("please specify reference genome")
+ref = args.reference if args.reference else print("please specify reference genome")
+
 # fastq files
 if args.fastq_path:
     fq_path = args.fastq_path + '/' if args.fastq_path[-1] != '/' else args.fastq_path
+
 # software
 bwa = args.BWA if args.BWA else 'bwa'
-#threads
+
+# threads
 t = int(args.threads) if args.threads else 1
 
 
-###### 1.2 get fq files list #########
-
+###### 01. get fq files list #########
 fq_files = os.listdir(fq_path)
 fqs = []
 for f in fq_files:
@@ -47,8 +46,8 @@ for f in fq_files:
         fqs.append(prefix)
 fqs = list(set(fqs))
 
-########### 2. alignment pipelines ###############
-###### 2.1 check if reference genome indexed #######
+########### 02. alignment pipelines #################
+###### 02.1 check if reference genome indexed #######
 def check_ref_idx(ref):
     ref_path = os.path.split(ref)[0] if os.path.split(ref)[0] else os.getwd() + '/' 
     ref_name = os.path.splitext(ref)[0]
@@ -57,7 +56,7 @@ def check_ref_idx(ref):
     else:
         print("reference genome has been indexed")
 
-###### 2.2 alignmenti, illumina pair-end reads #####        
+###### 02.2 alignmenti, illumina pair-end reads #####        
 def alignment(fq):
     """
     bwa-0.7.15 mem -M -R "@RG\tPL:Illumina\tID:$prefix\tSM:$prefix" ref.fa read1.fq.gz read2.fq.gz 
