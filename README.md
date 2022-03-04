@@ -5,12 +5,19 @@ Note: All Python scripts are written with Python3, and they are NOT compatible w
 
 1. Quality control using [FastQC](https://github.com/s-andrews/FastQC) and [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
    ```
-   python 01.quality_control_fqs.py -fqs [/path/fq_files/] -o [./qc/] -t [10] -trim -qc
+   python 01.quality_control_fqs.py -fqs [/path/fq_files/] \
+                                    -o [./qc/] \
+                                    -t [10] \
+                                    -trim -qc
    ```
 
 2. Align high-quality reads to [female reference genome](http://uswest.ensembl.org/Poecilia_reticulata/Info/Index) using [BWA MEM](https://github.com/lh3/bwa)
    ```
-   python 02.alignment_bwa.py -r [/path/ref_genome/] -bwa [bwa] -fq [./trim/] -a -t [10]
+   python 02.alignment_bwa.py -r [/path/ref_genome/] \
+                              -bwa [bwa] \
+                              -fq [./trim/] \
+                              -t [10] \
+                              -a 
    ```
 
 3. Fixmate, sort and mark duplications using [SAMtools](https://github.com/lh3/samtools)
