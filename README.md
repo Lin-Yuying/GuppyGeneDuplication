@@ -75,7 +75,7 @@ Note: All Python scripts are written with Python3, and they are NOT compatible w
 
     #(1) ngsRelate, here, please use filtered VCF and DON'T exclude non-CDS regions
     ```
-    /path/ngsrelate  -h [VCF.filtered.gz] -O [vcf.res]
+    /path/ngsrelate  -h [filtered.vcf.gz] -O [vcf.res]
     ```
 
     #(2) KING, before using KING, please convert VCF to `.bed`, `.fam` and `.bim` using [PLINK1.9](https://www.cog-genomics.org/plink/)
