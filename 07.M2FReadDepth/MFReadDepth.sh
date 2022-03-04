@@ -2,7 +2,7 @@
 This script will calculate average Male-to-Female Read depth ratio in each gene, 
 only including CDS region.
 
-If you want to calculate Male-to-Female read depth ratio including all site across genome.
+If you want to calculate Male-to-Female read depth ratio including all sites across genome.
 Please start from BAM files.
 '''
 #################### 1. calcualte read deoth across males and females, respectively
