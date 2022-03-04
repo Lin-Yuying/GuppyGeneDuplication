@@ -5,7 +5,7 @@ only including CDS region.
 If you want to calculate Male-to-Female read depth ratio including all sites across genome.
 Please start from BAM files.
 '''
-#################### 1. calcualte read deoth across males and females, respectively
+#################### 1. calcualte read depth across males and females, respectively
 vcftools --vcf [filter_CDS.vcf] --site-depth --keep [female.txt] --out [female.cds] 
 vcftools --vcf [filter_CDS.vcf] --site-depth --keep [male.txt] --out [male.cds] 
 
