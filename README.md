@@ -27,13 +27,26 @@ Note: All Python scripts are written with Python3, and they are NOT compatible w
 
     #(2) SNP filtering using [VCFtools](https://vcftools.github.io/index.html), here we only keep SNPs in CDS regions by specifying `--bed guppy_cds_coords.txt`
     ```
-    vcftools --vcf [input.vcf] --maf 0.05 --mac 1 --min-alleles 2 --max-alleles 2 --max-missing 0.9 --min-meanDP 10 
-    --max-meanDP 100 --bed guppy_cds_coords.txt --recode --recode-INFO-all --minGQ 25 --out [outprefix]
+    vcftools --vcf [input.vcf] \
+             --maf 0.05 \
+             --mac 1 \
+             --min-alleles 2 \
+             --max-alleles 2 \
+             --max-missing 0.9 \
+             --min-meanDP 10 \
+             --max-meanDP 100 \
+             --bed guppy_cds_coords.txt \
+             --recode --recode-INFO-all \
+             --minGQ 25 \
+             --out [outprefix]
     ```
 
     #(3) Calculating intersexual Fst for each SNP using [VCFtools](https://vcftools.github.io/index.html)
     ```
-    vcftools --vcf [input.vcf] --weir-fst-pop [female.txt] --weir-fst-pop [male.txt] --out [outprefix]
+    vcftools --vcf [input.vcf] \
+             --weir-fst-pop [female.txt] \
+             --weir-fst-pop [male.txt] \
+             --out [outprefix]
     ```
     
     #(4) SNPs with top 1% Fst 
@@ -80,6 +93,9 @@ Note: All Python scripts are written with Python3, and they are NOT compatible w
 
     #(2) KING, before using KING, please convert VCF to `.bed`, `.fam` and `.bim` using [PLINK1.9](https://www.cog-genomics.org/plink/)
     ```
-    /path/king -b [my.bed] --fam [my.fam] --bim [my.bim] --related
+    /path/king -b [my.bed] \
+               --fam [my.fam] \
+               --bim [my.bim] \
+               --related
     ```
 
