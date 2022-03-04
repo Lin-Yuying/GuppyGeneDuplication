@@ -1,7 +1,7 @@
 '''
 This scripts multi-processes raw fastq files with fastqc.
 Author: Y.Lin
-Usage: python3 qc_multi.py [-h] [-t THREADS] [-fq FASTQ_PATH] [-o OUTPUT] [-trim] [-qc]
+Usage: python3 01.quality-control_fqs.py [-h] [-t THREADS] [-fq FASTQ_PATH] [-o OUTPUT] [-trim] [-qc]
 '''
 
 import os
