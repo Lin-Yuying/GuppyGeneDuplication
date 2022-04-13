@@ -17,7 +17,7 @@ prefix=$1 # sample ID
 
 #bwa-0.7.15 index $ref
 
-#/Linux/samtools-1.9/bin/samtools faxid $ref
+#/Linux/samtools-1.9/bin/samtools faidx $ref
 
  
 
