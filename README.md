@@ -63,18 +63,18 @@ Note: All Python scripts are written with Python3, and they are NOT compatible w
     numpy.quantile (data, 0.01) 
     ```
 
-    #(5) Fisher's exact test using [PLINK1.9](https://www.cog-genomics.org/plink/), please check details on [05.FisherExactTest](./05.FisherExactTest)
+    #(5) Fisher's exact test using [PLINK1.9](https://www.cog-genomics.org/plink/), please check details in [05.FisherExactTest](./05.FisherExactTest)
     ```
     python 05.FisherExactTest/changeid.py [original.vcf] [newid.vcf]
     sh 05.FisherExactTest/fisher_cds_vcf.sh [newid.vcf] [outprefix]
     ```
 
-    #(6) Permutation test, please check details on [06.PermutationTest](./06.PermutationTest)
+    #(6) Permutation test, please check details in [06.PermutationTest](./06.PermutationTest)
     ```
     sh 06.permutation_test/run_permutation_sex.sh [filtered.cds.vcf]
     ``` 
 
-5. Male-to-Female read depth ratio, please check details on [07.M2FReadDepth](./07.M2FReadDepth)
+5. Male-to-Female read depth ratio, please check details in [07.M2FReadDepth](./07.M2FReadDepth)
    ```
    sh 07.M2FReadDepth/MFReadDepth.sh
    ```
