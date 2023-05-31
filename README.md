@@ -1,5 +1,5 @@
 ## GuppyGeneDuplication
-Scripts for Lin, Y., Darolti, I., Furman, B. L. F., Almeida, P., Sandkam, B. A., et al., Breden, F., Wright, A. E., Mank, J. E. (2022) Gene duplication to the Y chromosome in Trindadian Guppies. Molecular Ecology. 31, 1853–1863. https://doi.org/10.1111/mec.16355
+Scripts for Lin, Y., Darolti, I., Furman, B. L. F., Almeida, P., Sandkam, B. A., Breden, F., Wright, A. E., Mank, J. E. (2022) Gene duplication to the Y chromosome in Trindadian Guppies. Molecular Ecology. 31, 1853–1863. https://doi.org/10.1111/mec.16355
 
 Note: All Python scripts are written with Python3, and they are NOT compatible with Python2.
 
